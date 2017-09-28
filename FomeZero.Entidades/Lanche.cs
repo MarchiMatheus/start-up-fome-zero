@@ -26,35 +26,27 @@ namespace FomeZero.Entidades
         {
             get
             {
-                if (VerificaDescontoLancheLight())
+                if (AplicaDescontoLancheLight)
                 {
-                    return Ingredientes.Sum(s => s.ValorAgregado) * ConstantesDesconto.ValorDescontoPadraoLancheLight;
+                    return Ingredientes.Sum(s => s.Valor) * ConstantesDesconto.ValorDescontoPadraoLancheLight;
                 }
 
-                return Ingredientes.Sum(s => s.ValorAgregado);
+                return Ingredientes.Sum(s => s.Valor);
             }
-        }
-
-        #region [ Métodos ]
+        }        
 
         /// <summary>
-        /// Verifica se o lanche é light
+        /// Indicador de aplicação de desconto para lanches light
         /// </summary>
-        /// <returns></returns>
-        private bool VerificaDescontoLancheLight()
+        private bool AplicaDescontoLancheLight
         {
-            var aplicaDesconto = false;
-            var listaIngredientes = Ingredientes.Select(s => s.Nome).Distinct();
-
-            if (listaIngredientes.Contains(ConstantesIngrediente.Alface) &&
-                !listaIngredientes.Contains(ConstantesIngrediente.Bacon))
+            get
             {
-                aplicaDesconto = true;
+                var listaIngredientes = Ingredientes.Select(s => s.Nome).Distinct();
+
+                return (listaIngredientes.Contains(NomeIngrediente.Alface) &&
+                        !listaIngredientes.Contains(NomeIngrediente.Bacon));
             }
-
-            return aplicaDesconto;
         }
-
-        #endregion
     }
 }
