@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomeZero", "FomeZero\FomeZe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomeZero.Testes", "FomeZero.Testes\FomeZero.Testes.csproj", "{6A9A6EE3-AFAA-4836-B427-58221A4902D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomeZero.Entidades", "FomeZero.Entidades\FomeZero.Entidades.csproj", "{72402549-A1F2-4491-8420-2093D06BAA99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6A9A6EE3-AFAA-4836-B427-58221A4902D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A9A6EE3-AFAA-4836-B427-58221A4902D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A9A6EE3-AFAA-4836-B427-58221A4902D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72402549-A1F2-4491-8420-2093D06BAA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72402549-A1F2-4491-8420-2093D06BAA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72402549-A1F2-4491-8420-2093D06BAA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72402549-A1F2-4491-8420-2093D06BAA99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

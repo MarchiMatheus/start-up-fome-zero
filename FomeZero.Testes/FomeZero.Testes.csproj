@@ -55,9 +55,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FomeZero\FomeZero.csproj">
-      <Project>{7dd0ecc7-c66f-4e00-b7f8-95b711450559}</Project>
-      <Name>FomeZero</Name>
+    <ProjectReference Include="..\FomeZero.Entidades\FomeZero.Entidades.csproj">
+      <Project>{72402549-a1f2-4491-8420-2093d06baa99}</Project>
+      <Name>FomeZero.Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

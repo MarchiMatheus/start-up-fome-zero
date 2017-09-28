@@ -1,4 +1,5 @@
-﻿using FomeZero.Models;
+﻿using FomeZero.Entidades;
+using FomeZero.Entidades.Dominio;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
@@ -18,9 +19,9 @@ namespace FomeZero.Testes
             //Cria lista de ingredientes
             List<Ingrediente> listaIngredientes = new List<Ingrediente>
             {
-                new Ingrediente { Nome = "Bacon", ValorIngrediente = 2 },
-                new Ingrediente { Nome = "Hambúrguer de carne", ValorIngrediente = 3 },
-                new Ingrediente { Nome = "Queijo", ValorIngrediente = 1.5M }
+                new Ingrediente { Nome = ConstantesIngrediente.Bacon, ValorIngrediente = 2, Quantidade = 1 },
+                new Ingrediente { Nome = ConstantesIngrediente.HamburguerCarne, ValorIngrediente = 3, Quantidade = 1 },
+                new Ingrediente { Nome = ConstantesIngrediente.Queijo, ValorIngrediente = 1.5M, Quantidade = 1 }
             };
 
             Lanche XBacon = new Lanche();
@@ -42,8 +43,8 @@ namespace FomeZero.Testes
             //Cria lista de ingredientes
             List<Ingrediente> listaIngredientes = new List<Ingrediente>
             {                
-                new Ingrediente { Nome = "Hambúrguer de carne", ValorIngrediente = 3 },
-                new Ingrediente { Nome = "Queijo", ValorIngrediente = 1.5M }
+                new Ingrediente { Nome = ConstantesIngrediente.HamburguerCarne, ValorIngrediente = 3, Quantidade = 1 },
+                new Ingrediente { Nome = ConstantesIngrediente.Queijo, ValorIngrediente = 1.5M, Quantidade = 1 }
             };
 
             Lanche XBurguer = new Lanche();
@@ -65,9 +66,9 @@ namespace FomeZero.Testes
             //Cria lista de ingredientes
             List<Ingrediente> listaIngredientes = new List<Ingrediente>
             {
-                new Ingrediente { Nome = "Ovo", ValorIngrediente = 0.8M },
-                new Ingrediente { Nome = "Hambúrguer de carne", ValorIngrediente = 3 },
-                new Ingrediente { Nome = "Queijo", ValorIngrediente = 1.5M }
+                new Ingrediente { Nome = ConstantesIngrediente.Ovo, ValorIngrediente = 0.8M, Quantidade = 1 },
+                new Ingrediente { Nome = ConstantesIngrediente.HamburguerCarne, ValorIngrediente = 3, Quantidade = 1 },
+                new Ingrediente { Nome = ConstantesIngrediente.Queijo, ValorIngrediente = 1.5M, Quantidade = 1 }
             };
 
             Lanche XEgg = new Lanche();
@@ -89,10 +90,10 @@ namespace FomeZero.Testes
             //Cria lista de ingredientes
             List<Ingrediente> listaIngredientes = new List<Ingrediente>
             {
-                new Ingrediente { Nome = "Ovo", ValorIngrediente = 0.8M },
-                new Ingrediente { Nome = "Bacon", ValorIngrediente = 2 },
-                new Ingrediente { Nome = "Hambúrguer de carne", ValorIngrediente = 3 },
-                new Ingrediente { Nome = "Queijo", ValorIngrediente = 1.5M }
+                new Ingrediente { Nome = ConstantesIngrediente.Ovo, ValorIngrediente = 0.8M, Quantidade = 1 },
+                new Ingrediente { Nome = ConstantesIngrediente.Bacon, ValorIngrediente = 2, Quantidade = 1 },
+                new Ingrediente { Nome = ConstantesIngrediente.HamburguerCarne, ValorIngrediente = 3, Quantidade = 1 },
+                new Ingrediente { Nome = ConstantesIngrediente.Queijo, ValorIngrediente = 1.5M, Quantidade = 1 }
             };
 
             Lanche XEggBacon = new Lanche();
