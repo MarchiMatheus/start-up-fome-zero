@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomeZero", "FomeZero\FomeZero.csproj", "{7DD0ECC7-C66F-4E00-B7F8-95B711450559}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomeZero.Testes", "FomeZero.Testes\FomeZero.Testes.csproj", "{6A9A6EE3-AFAA-4836-B427-58221A4902D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7DD0ECC7-C66F-4E00-B7F8-95B711450559}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DD0ECC7-C66F-4E00-B7F8-95B711450559}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DD0ECC7-C66F-4E00-B7F8-95B711450559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9A6EE3-AFAA-4836-B427-58221A4902D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9A6EE3-AFAA-4836-B427-58221A4902D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9A6EE3-AFAA-4836-B427-58221A4902D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9A6EE3-AFAA-4836-B427-58221A4902D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
