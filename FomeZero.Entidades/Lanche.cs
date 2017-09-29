@@ -33,7 +33,7 @@ namespace FomeZero.Entidades
 
                 return Ingredientes.Sum(s => s.Valor);
             }
-        }        
+        }
 
         /// <summary>
         /// Indicador de aplicação de desconto para lanches light

@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FomeZero.Entidades\FomeZero.Entidades.csproj">
-      <Project>{72402549-a1f2-4491-8420-2093d06baa99}</Project>
+      <Project>{c66e537e-1f52-4ce9-9384-69be9499d986}</Project>
       <Name>FomeZero.Entidades</Name>
     </ProjectReference>
   </ItemGroup>
