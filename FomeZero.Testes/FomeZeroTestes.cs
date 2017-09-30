@@ -2,6 +2,7 @@
 using FomeZero.Entidades.Dominio;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FomeZero.Testes
 {
@@ -11,7 +12,7 @@ namespace FomeZero.Testes
         #region [ Valida preço do X-Bacon ]
 
         /// <summary>
-        /// Critério de aceite: Valor do lanche X-Bacon deve ser 6,50
+        /// Critério de aceite: Valor do lanche X-Bacon deve ser 6,50 sem inflação
         /// </summary>
         [TestMethod]
         public void ValidaPrecoXBacon()
@@ -27,15 +28,15 @@ namespace FomeZero.Testes
             Lanche xBacon = new Lanche();
             xBacon.Ingredientes = listaIngredientes;
 
-            Assert.AreEqual(6.5M, xBacon.Preco);
+            Assert.AreEqual(ExecutaCalculo(listaIngredientes), xBacon.Preco);
         }
 
         #endregion
 
         #region [ Valida preço do X-Burguer ]
-        
+
         /// <summary>
-        /// Critério de aceite: Valor do lanche X-Burguer deve ser 4,50
+        /// Critério de aceite: Valor do lanche X-Burguer deve ser 4,50 sem inflação
         /// </summary>
         [TestMethod]
         public void ValidaValorLancheXBurguer()
@@ -50,7 +51,7 @@ namespace FomeZero.Testes
             Lanche xBurguer = new Lanche();
             xBurguer.Ingredientes = listaIngredientes;
 
-            Assert.AreEqual(4.5M, xBurguer.Preco);
+            Assert.AreEqual(ExecutaCalculo(listaIngredientes), xBurguer.Preco);
         }
 
         #endregion
@@ -58,7 +59,7 @@ namespace FomeZero.Testes
         #region [ Valida preço do X-Egg ]
 
         /// <summary>
-        /// Critério de aceite: Valor do lanche X-Egg deve ser 5,30
+        /// Critério de aceite: Valor do lanche X-Egg deve ser 5,30 sem inflação
         /// </summary>
         [TestMethod]
         public void ValidaValorLancheXEgg()
@@ -74,7 +75,7 @@ namespace FomeZero.Testes
             Lanche xEgg = new Lanche();
             xEgg.Ingredientes = listaIngredientes;
 
-            Assert.AreEqual(5.3M, xEgg.Preco);
+            Assert.AreEqual(ExecutaCalculo(listaIngredientes), xEgg.Preco);
         }
 
         #endregion
@@ -82,7 +83,7 @@ namespace FomeZero.Testes
         #region [ Valida preço do X-Egg Bacon ]
 
         /// <summary>
-        /// Critério de aceite: Valor do lanche X-Egg Bacon deve ser 7,30
+        /// Critério de aceite: Valor do lanche X-Egg Bacon deve ser 7,30 sem inflação
         /// </summary>
         [TestMethod]
         public void ValidaValorLancheXEggBacon()
@@ -99,7 +100,7 @@ namespace FomeZero.Testes
             Lanche xEggBacon = new Lanche();
             xEggBacon.Ingredientes = listaIngredientes;
 
-            Assert.AreEqual(7.3M, xEggBacon.Preco);
+            Assert.AreEqual(ExecutaCalculo(listaIngredientes), xEggBacon.Preco);
         }
 
         #endregion
@@ -107,7 +108,7 @@ namespace FomeZero.Testes
         #region [ Valida promoção lanche light ]
 
         /// <summary>
-        /// Critério de aceite: Valor do lanche light deve ser 4,41
+        /// Critério de aceite: Valor do lanche light deve ser 4,41 sem inflação
         /// </summary>
         [TestMethod]
         public void ValidaPromocaoLancheLight()
@@ -123,7 +124,7 @@ namespace FomeZero.Testes
             Lanche xLight = new Lanche();
             xLight.Ingredientes = listaIngredientes;
 
-            Assert.AreEqual(4.41M, xLight.Preco);
+            Assert.AreEqual(ExecutaCalculo(listaIngredientes), xLight.Preco);
         }
 
         #endregion
@@ -131,7 +132,7 @@ namespace FomeZero.Testes
         #region [ Valida promoção muita carne ]
 
         /// <summary>
-        /// Critério de aceite: Valor do lanche com muita carne deve ser 7,50
+        /// Critério de aceite: Valor do lanche com muita carne deve ser 7,50 sem inflação
         /// </summary>
         [TestMethod]
         public void ValidaPromocaoMuitaCarne()
@@ -146,7 +147,7 @@ namespace FomeZero.Testes
             Lanche xMuitaCarne = new Lanche();
             xMuitaCarne.Ingredientes = listaIngredientes;
 
-            Assert.AreEqual(7.503M, xMuitaCarne.Preco);
+            Assert.AreEqual(ExecutaCalculo(listaIngredientes), xMuitaCarne.Preco);
         }
 
         #endregion
@@ -154,7 +155,7 @@ namespace FomeZero.Testes
         #region [ Valida promoção muito queijo ]
 
         /// <summary>
-        /// Critério de aceite: Valor do lanche com muito queijo deve ser 6
+        /// Critério de aceite: Valor do lanche com muito queijo deve ser 6 sem inflação
         /// </summary>
         [TestMethod]
         public void ValidaPromocaoMuitoQueijo()
@@ -169,7 +170,7 @@ namespace FomeZero.Testes
             Lanche xMuitoQueijo = new Lanche();
             xMuitoQueijo.Ingredientes = listaIngredientes;
 
-            Assert.AreEqual(6.0015M, xMuitoQueijo.Preco);
+            Assert.AreEqual(ExecutaCalculo(listaIngredientes), xMuitoQueijo.Preco);
         }
 
         #endregion
@@ -177,7 +178,7 @@ namespace FomeZero.Testes
         #region [ Valida promoção com descontos acumulativos ]
 
         /// <summary>
-        /// Critério de aceite: Valor do lanche com muito queijo deve ser 11,16
+        /// Critério de aceite: Valor do lanche com muito queijo deve ser 11,16 sem inflação
         /// </summary>
         [TestMethod]
         public void ValidaPromocaoComDescontosAcumulativos()
@@ -193,8 +194,89 @@ namespace FomeZero.Testes
             Lanche lancheDescontoAcumulativo = new Lanche();
             lancheDescontoAcumulativo.Ingredientes = listaIngredientes;
 
-            Assert.AreEqual(11.1654M, lancheDescontoAcumulativo.Preco);
+            Assert.AreEqual(ExecutaCalculo(listaIngredientes), lancheDescontoAcumulativo.Preco);
         }
+
+        #endregion
+
+        #region [ Métodos privádos ]        
+
+        #region [ Realiza cálculo do lanche ]        
+
+        /// <summary>
+        /// Realiza cálculo do valor do lanche
+        /// </summary>
+        /// <returns></returns>
+        private decimal ExecutaCalculo(List<Ingrediente> listaIngredientes)
+        {
+            decimal valorTotal = 0.0M;
+
+            #region [ Realiza cálculo dos ingredientes ]            
+
+            foreach (var ingrediente in listaIngredientes)
+            {
+                var quantidadeComDesconto = (decimal)ingrediente.Quantidade;
+                
+                if (ingrediente.Nome == NomeIngrediente.HamburguerCarne && ingrediente.Quantidade >= 3)
+                {
+                    quantidadeComDesconto = (decimal)ingrediente.Quantidade * ConstantesDesconto.ValorDescontoMuitaCarne;
+                }
+                else if (ingrediente.Nome == NomeIngrediente.Queijo && ingrediente.Quantidade >= 3)
+                {
+                    quantidadeComDesconto = (decimal)ingrediente.Quantidade * ConstantesDesconto.ValorDescontoMuitoQueijo;
+                }
+
+                valorTotal += (ObterValorUnitarioIngrediente(ingrediente.Nome) * quantidadeComDesconto);
+            }
+
+            #endregion
+
+            #region [ Verifica desconto de lanche light ]
+
+            var nomeIngredientes = listaIngredientes.Select(s => s.Nome).Distinct();
+
+            if (nomeIngredientes.Contains(NomeIngrediente.Alface) &&
+                !nomeIngredientes.Contains(NomeIngrediente.Bacon))
+            {
+                valorTotal = valorTotal * ConstantesDesconto.ValorDescontoPadraoLancheLight;
+            }
+
+            #endregion
+
+            return valorTotal;
+        }
+
+        #endregion
+
+        #region [ Obtém valor padrão do ingrediente ]        
+
+        /// <summary>
+        /// Obtém o valor padrão do ingrediente para compor o cálculo
+        /// </summary>
+        /// <returns></returns>
+        private decimal ObterValorUnitarioIngrediente(string nomeIngrediente)
+        {
+            var valoringrediente = 0.0M;
+
+            if (nomeIngrediente.Equals(NomeIngrediente.Alface))
+                valoringrediente = ValorIngrediente.Alface;
+
+            if (nomeIngrediente.Equals(NomeIngrediente.Bacon))
+                valoringrediente = ValorIngrediente.Bacon;
+
+            if (nomeIngrediente.Equals(NomeIngrediente.HamburguerCarne))
+                valoringrediente = ValorIngrediente.HamburguerCarne;
+
+            if (nomeIngrediente.Equals(NomeIngrediente.Ovo))
+                valoringrediente = ValorIngrediente.Ovo;
+
+            if (nomeIngrediente.Equals(NomeIngrediente.Queijo))
+                valoringrediente = ValorIngrediente.Queijo;
+
+            return valoringrediente;
+        }
+
+        #endregion
 
         #endregion
     }
