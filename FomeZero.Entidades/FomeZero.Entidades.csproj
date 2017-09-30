@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Dominio\ConstantesDesconto.cs" />
     <Compile Include="Dominio\NomeIngrediente.cs" />
+    <Compile Include="Dominio\NomeLanche.cs" />
     <Compile Include="Dominio\ValorIngrediente.cs" />
     <Compile Include="Ingrediente.cs" />
     <Compile Include="Lanche.cs" />

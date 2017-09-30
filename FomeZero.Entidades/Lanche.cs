@@ -11,8 +11,14 @@ namespace FomeZero.Entidades
         /// </summary>
         public Lanche()
         {
+            this.Nome = null;
             this.Ingredientes = new List<Ingrediente>();
         }
+
+        /// <summary>
+        /// Nome do lanche
+        /// </summary>
+        public string Nome { get; set; }
 
         /// <summary>
         /// Lista com ingredientes do lanche

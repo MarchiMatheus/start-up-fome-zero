@@ -1,0 +1,58 @@
+﻿@using FomeZero.Models
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model CardapioViewModel
+
+<h2>Cardápio</h2><br />
+
+<div id="divAccordion">
+    @foreach (var lanche in Model.Lanches)
+    {
+        <h3>@lanche.Nome</h3>
+        <div>
+            @{                
+                var html = "";
+
+                //Monta ingredientes
+                foreach(var ingrediente in lanche.Ingredientes)
+                {
+                    if(ingrediente.Equals(lanche.Ingredientes.First()))
+                    {
+                        html = ingrediente;
+                    }
+                    else if (ingrediente.Equals(lanche.Ingredientes.Last()))
+                    {
+                        html += " e " + ingrediente;
+                    }
+                    else
+                    {
+                        html += ", " + ingrediente;
+                    }
+                }
+
+                <p>@html</p>
+            }
+            <p>Preço: R$@lanche.Preco</p>
+        </div>
+    }
+</div>
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        local = {
+
+            Id: {
+
+                DivAccordion: 'divAccordion'.jqueryId(),
+            }
+        }
+
+    </script>
+
+    @Scripts.Render("~/Areas/Cardapio")
+}

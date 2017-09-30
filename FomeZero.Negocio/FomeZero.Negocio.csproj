@@ -43,5 +43,11 @@
     <Compile Include="CardapioNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FomeZero.Entidades\FomeZero.Entidades.csproj">
+      <Project>{c66e537e-1f52-4ce9-9384-69be9499d986}</Project>
+      <Name>FomeZero.Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
