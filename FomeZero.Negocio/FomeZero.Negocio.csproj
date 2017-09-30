@@ -43,6 +43,7 @@
     <Compile Include="CardapioNegocio.cs" />
     <Compile Include="Entidades\In\MontarLanchePersonalizadoIn.cs" />
     <Compile Include="Entidades\Out\MontarLanchePersonalizadoOut.cs" />
+    <Compile Include="Entidades\Out\ObterCardapioOut.cs" />
     <Compile Include="LanchePersonalizadoNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

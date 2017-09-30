@@ -17,11 +17,10 @@ namespace FomeZero.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
+            var obterCardapioOut = cardapioNegocio.ObterCardapio();
+
             CardapioViewModel cardapioVM = new CardapioViewModel();
-
-            var cardapio = cardapioNegocio.ObterCardapio();
-
-            cardapioVM.Lanches = Mapper.Map<List<Lanche>, List<LancheViewModel>>(cardapio);
+            cardapioVM.Lanches = Mapper.Map<List<Lanche>, List<LancheViewModel>>(obterCardapioOut.Cardapio);
 
             return View(cardapioVM);
         }

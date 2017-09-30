@@ -1,7 +1,7 @@
 ﻿using FomeZero.Entidades;
 using FomeZero.Entidades.Dominio;
+using FomeZero.Negocio.Entidades.Out;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace FomeZero.Negocio
 {
@@ -13,16 +13,16 @@ namespace FomeZero.Negocio
         /// Obtém cardápio
         /// </summary>
         /// <returns></returns>
-        public List<Lanche> ObterCardapio()
+        public ObterCardapioOut ObterCardapio()
         {
-            List<Lanche> cardapio = new List<Lanche>();
+            ObterCardapioOut obterCardapioOut = new ObterCardapioOut();
 
-            cardapio.Add(ObterXBacon());
-            cardapio.Add(ObterXBurguer());
-            cardapio.Add(ObterXEgg());
-            cardapio.Add(ObterXEggBacon());
+            obterCardapioOut.Cardapio.Add(ObterXBacon());
+            obterCardapioOut.Cardapio.Add(ObterXBurguer());
+            obterCardapioOut.Cardapio.Add(ObterXEgg());
+            obterCardapioOut.Cardapio.Add(ObterXEggBacon());
 
-            return cardapio;
+            return obterCardapioOut;
         }
 
         #endregion
