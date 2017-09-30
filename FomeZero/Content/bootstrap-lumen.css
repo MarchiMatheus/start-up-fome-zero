@@ -3732,8 +3732,7 @@ select[multiple].input-lg {
 }
 
 @media (min-width: 768px) {
-    .form-horizontal .control-label {
-        text-align: right;
+    .form-horizontal .control-label {        
         margin-bottom: 0;
         padding-top: 8px;
     }

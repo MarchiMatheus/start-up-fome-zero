@@ -142,21 +142,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dicionario\Action\LanchePersonalizado\LanchePersonalizadoAction.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CardapioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LanchePersonalizadoController.cs" />
+    <Compile Include="Dicionario\ControllerName\LanchePersonalizado\LanchePersonalizadoController.cs" />
+    <Compile Include="Dicionario\Formulario\LanchePersonalizado\LanchePersonalizadoFormulario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Mappers\AutoMapperConfig.cs" />
     <Compile Include="Models\CardapioViewModel.cs" />
+    <Compile Include="Models\MontarLanchePersonalizadoViewModel.cs" />
     <Compile Include="Models\LancheViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-lumen.css" />
+    <Content Include="Content\bootstrap-override.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\jquery-ui.css" />
@@ -165,6 +171,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\Areas\Cardapio\Cardapio.js" />
+    <Content Include="Scripts\Areas\LanchePersonalizado\LanchePersonalizado.js" />
     <Content Include="Scripts\Global\bootstrap.js" />
     <Content Include="Scripts\Global\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -196,6 +203,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Cardapio\Index.cshtml" />
+    <Content Include="Views\LanchePersonalizado\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

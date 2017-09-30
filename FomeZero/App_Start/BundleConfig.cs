@@ -28,12 +28,20 @@ namespace FomeZero
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-lumen.css",
                       "~/Content/site.css",
-                      "~/Content/jquery-ui.css"));
+                      "~/Content/jquery-ui.css",
+                      "~/Content/bootstrap-override.css"));
 
             #region [ Cardápio ]
 
             bundles.Add(new ScriptBundle("~/Areas/Cardapio").Include(
                         "~/Scripts/Areas/Cardapio/Cardapio.js"));
+
+            #endregion
+
+            #region [ Lanche personalizado ]
+
+            bundles.Add(new ScriptBundle("~/Areas/LanchePersonalizado").Include(
+                        "~/Scripts/Areas/LanchePersonalizado/LanchePersonalizado.js"));
 
             #endregion
         }

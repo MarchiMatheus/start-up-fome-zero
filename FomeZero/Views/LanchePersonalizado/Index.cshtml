@@ -1,0 +1,60 @@
+﻿@using FomeZero.Dicionario.Action.LanchePersonalizado
+@using FomeZero.Dicionario.ControllerName.LanchePersonalizado
+@using FomeZero.Dicionario.Formulario.LanchePersonalizado
+@using FomeZero.Models
+
+@{
+    ViewBag.Title = "Monte seu lanche";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model MontarLanchePersonalizadoViewModel
+<div>
+    <h2>Monte o seu lanche</h2>
+    * Informe a quantidade de cada ingrediente.<br />
+    * Caso não informe nenhum valor, o ingrediente não será incluído no seu lanche.
+</div><br />
+
+@using (Html.BeginForm(LanchePersonalizadoAction.PedirLanche, LanchePersonalizadoController.ControllerName, FormMethod.Post, new { id = LanchePersonalizadoFormulario.Salvar, @class = "form-horizontal" }))
+{
+    <div class="col-md-12">
+        <h4>Ingredientes</h4><br />
+    </div>
+
+    <div class="panel-body">
+        @foreach (var ingrediente in Model.Ingredientes)
+        {
+            <div class="col-md-12 form-group">
+                @Html.Label(String.Format("{0}: ", ingrediente), new { @class = "control-label col-md-2 nopadding-right" })
+                <div class="col-md-2">
+                    @Html.TextBox(ingrediente, null, new { @class = "form-control", @id = "idIngrediente" + ingrediente, @MaxLength = 2 })
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<div>
+    Colocar as promoções para informação ao usuário.
+</div>
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        local = {
+
+            Id: {
+
+                CampoIngredienteAlface: 'idIngredienteAlface'.jqueryId(),
+                CampoIngredienteBacon: 'idIngredienteBacon'.jqueryId(),
+                CampoIngredienteHamburguerCarne: 'idIngredienteHamburguerCarne'.jqueryId(),
+                CampoIngredienteOvo: 'idIngredienteOvo'.jqueryId(),
+                CampoIngredienteQueijo: 'idIngredienteQueijo'.jqueryId(),
+            }
+        }
+
+    </script>
+
+    @Scripts.Render("~/Areas/LanchePersonalizado")
+}
