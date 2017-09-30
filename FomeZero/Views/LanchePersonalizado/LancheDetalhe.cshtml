@@ -1,0 +1,40 @@
+﻿@using FomeZero.Models
+
+@{
+    ViewBag.Title = "Lanche personalizado";
+}
+
+@model LanchePersonalizadoViewModel
+
+<h2>Detalhes do lanche</h2><br />
+
+<div>
+    <div>
+        <h4>Ingredientes escolhidos:</h4>
+        <div>
+            @{
+                var html = "";
+
+                //Monta ingredientes
+                foreach (var ingrediente in Model.Lanche.Ingredientes)
+                {
+                    if (ingrediente.Equals(Model.Lanche.Ingredientes.First()))
+                    {
+                        html = ingrediente;
+                    }
+                    else if (ingrediente.Equals(Model.Lanche.Ingredientes.Last()))
+                    {
+                        html += " e " + ingrediente;
+                    }
+                    else
+                    {
+                        html += ", " + ingrediente;
+                    }
+                }
+
+                <p>@html</p>
+            }
+            <p>Preço: R$@Model.Lanche.Preco</p>
+        </div>
+    </div>
+</div>

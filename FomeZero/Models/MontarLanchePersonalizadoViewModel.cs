@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using FomeZero.Dicionario.Label.LanchePersonalizado;
+using System.ComponentModel.DataAnnotations;
 
 namespace FomeZero.Models
 {
@@ -9,12 +10,41 @@ namespace FomeZero.Models
         /// </summary>
         public MontarLanchePersonalizadoViewModel()
         {
-            this.Ingredientes = new List<string>();
+            this.Alface = null;
+            this.Bacon = null;
+            this.HamburguerCarne = null;
+            this.Ovo = null;
+            this.Queijo = null;
         }
 
         /// <summary>
-        /// Lista de ingredientes
+        /// Alface
         /// </summary>
-        public List<string> Ingredientes { get; set; }
+        [Display(Name = LanchePersonalizadoLabel.Alface)]
+        public int? Alface { get; set; }
+
+        /// <summary>
+        /// Bacon
+        /// </summary>
+        [Display(Name = LanchePersonalizadoLabel.Bacon)]
+        public int? Bacon { get; set; }
+
+        /// <summary>
+        /// Hambúrguer de carne
+        /// </summary>
+        [Display(Name = LanchePersonalizadoLabel.HamburguerCarne)]
+        public int? HamburguerCarne { get; set; }
+
+        /// <summary>
+        /// Ovo
+        /// </summary>
+        [Display(Name = LanchePersonalizadoLabel.Ovo)]
+        public int? Ovo { get; set; }
+
+        /// <summary>
+        /// Queijo
+        /// </summary>
+        [Display(Name = LanchePersonalizadoLabel.Queijo)]
+        public int? Queijo { get; set; }
     }
 }

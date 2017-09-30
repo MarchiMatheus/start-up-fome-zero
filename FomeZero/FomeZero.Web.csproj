@@ -151,11 +151,13 @@
     <Compile Include="Controllers\LanchePersonalizadoController.cs" />
     <Compile Include="Dicionario\ControllerName\LanchePersonalizado\LanchePersonalizadoController.cs" />
     <Compile Include="Dicionario\Formulario\LanchePersonalizado\LanchePersonalizadoFormulario.cs" />
+    <Compile Include="Dicionario\Label\LanchePersonalizado\LanchePersonalizadoLabel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Mappers\AutoMapperConfig.cs" />
     <Compile Include="Models\CardapioViewModel.cs" />
+    <Compile Include="Models\LanchePersonalizadoViewModel.cs" />
     <Compile Include="Models\MontarLanchePersonalizadoViewModel.cs" />
     <Compile Include="Models\LancheViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -183,6 +185,7 @@
     <Content Include="Scripts\Global\jquery-1.10.2.min.js" />
     <None Include="Scripts\Global\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\Global\jquery-ui.js" />
+    <Content Include="Scripts\Global\jquery.mask.js" />
     <Content Include="Scripts\Global\jquery.validate.js" />
     <Content Include="Scripts\Global\jquery.validate.min.js" />
     <Content Include="Scripts\Global\jquery.validate.unobtrusive.js" />
@@ -204,6 +207,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Cardapio\Index.cshtml" />
     <Content Include="Views\LanchePersonalizado\Index.cshtml" />
+    <Content Include="Views\LanchePersonalizado\LancheDetalhe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

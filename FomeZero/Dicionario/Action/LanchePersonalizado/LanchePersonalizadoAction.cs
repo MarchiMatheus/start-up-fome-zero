@@ -2,6 +2,6 @@
 {
     public class LanchePersonalizadoAction
     {
-        public const string PedirLanche = "PedirLanche";
+        public const string MontarLanchePersolanizado = "MontarLanchePersolanizado";
     }
 }

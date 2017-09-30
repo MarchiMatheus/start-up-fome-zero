@@ -11,6 +11,7 @@ namespace FomeZero
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/Global/jquery-{version}.js",
                         "~/Scripts/Global/jquery-ui.js",
+                        "~/Scripts/Global/jquery.mask.js",
                         "~/Scripts/Global/FomeZeroUtil.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
