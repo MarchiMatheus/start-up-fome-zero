@@ -18,11 +18,14 @@ namespace FomeZero.Mappers
                     .ForMember(dest => dest.Ingredientes, opt => opt.MapFrom(src => src.Ingredientes.Select(s => s.Nome)))
                     .ForMember(dest => dest.Preco, opt => opt.MapFrom(src => src.Preco.ToString("N2")));
 
+                mapper.CreateMap<Ingrediente, IngredienteViewModel>()
+                    .ForMember(dest => dest.Valor, opt => opt.MapFrom(src => src.Valor.ToString("N2")));
+
                 #endregion
 
                 #region [ ViewModel => Entidade ]
 
-                mapper.CreateMap<MontarLanchePersonalizadoViewModel, MontarLanchePersonalizadoIn>()
+                 mapper.CreateMap<MontarLanchePersonalizadoViewModel, MontarLanchePersonalizadoIn>()
                     .ForMember(dest => dest.QuantidadeAlface, opt => opt.MapFrom(src => src.Alface.HasValue? src.Alface : 0))
                     .ForMember(dest => dest.QuantidadeBacon, opt => opt.MapFrom(src => src.Bacon.HasValue ? src.Bacon : 0))
                     .ForMember(dest => dest.QuantidadeHamburguerCarne, opt => opt.MapFrom(src => src.HamburguerCarne.HasValue ? src.HamburguerCarne : 0))

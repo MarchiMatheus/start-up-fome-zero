@@ -1,0 +1,34 @@
+﻿@using FomeZero.Models
+
+@{
+    ViewBag.Title = "Ingredientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model DominioIngredienteViewModel
+
+<h2>Tabela de preços de ingredientes</h2>
+
+<div class="panel-body">
+    <div class="col-md-12 form-group">
+        <div class="col-md-12">
+            <table class="table table-striped table-hover ">
+                <tr>
+                    <th>Ingrediente</th>
+                    <th>Valor</th>
+                </tr>
+                @foreach (var ingrediente in Model.Ingredientes)
+                {
+                    <tr>
+                        <td>
+                            @ingrediente.Nome
+                        </td>
+                        <td>
+                            R$ @ingrediente.Valor
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

@@ -142,6 +142,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\IngredientesController.cs" />
+    <Compile Include="Controllers\PromocaoController.cs" />
     <Compile Include="Dicionario\Action\LanchePersonalizado\LanchePersonalizadoAction.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -157,6 +159,8 @@
     </Compile>
     <Compile Include="Mappers\AutoMapperConfig.cs" />
     <Compile Include="Models\CardapioViewModel.cs" />
+    <Compile Include="Models\DominioIngredienteViewModel.cs" />
+    <Compile Include="Models\IngredienteViewModel.cs" />
     <Compile Include="Models\LanchePersonalizadoViewModel.cs" />
     <Compile Include="Models\MontarLanchePersonalizadoViewModel.cs" />
     <Compile Include="Models\LancheViewModel.cs" />
@@ -208,6 +212,8 @@
     <Content Include="Views\Cardapio\Index.cshtml" />
     <Content Include="Views\LanchePersonalizado\Index.cshtml" />
     <Content Include="Views\LanchePersonalizado\LancheDetalhe.cshtml" />
+    <Content Include="Views\Ingredientes\Index.cshtml" />
+    <Content Include="Views\Promocao\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
