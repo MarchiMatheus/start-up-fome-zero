@@ -46,6 +46,7 @@
     <Compile Include="Entidades\Out\ObterCardapioOut.cs" />
     <Compile Include="Entidades\Out\ObterDominioIngredienteOut.cs" />
     <Compile Include="IngredienteNegocio.cs" />
+    <Compile Include="LancheNegocio.cs" />
     <Compile Include="LanchePersonalizadoNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
